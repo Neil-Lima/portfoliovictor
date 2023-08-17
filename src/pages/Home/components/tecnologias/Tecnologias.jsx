@@ -1,132 +1,60 @@
-import React from 'react'
-import html from './img/html.png' 
-import css from './img/css.png'
-import bootstrap  from './img/bootstrap-stack.png'
-import bootstrapReact from './img/bootstrap-react.png'
-import javascript from './img/js.png'
-import chakra from './img/chakra.png'
-import materialize from './img/materialize-logo-0FCAD8A6F8-seeklogo.com.png'
-import mongodb from './img/mongodb.png'
-import mysql from './img/mysql-logo2.png'
-import react from './img/react.png'
-import jsonServer from './img/json-server.png'
-import styleComponent from './img/StyleComponent.png'
-import typescript from './img/typescript.png'
+import React from 'react';
+import { Box, Flex, Text, Image } from '@chakra-ui/react';
+
+import html from './img/html.png';
+import css from './img/css.png';
+import bootstrap from './img/bootstrap-stack.png';
+import bootstrapReact from './img/bootstrap-react.png';
+import javascript from './img/js.png';
+import chakra from './img/chakra.png';
+import materialize from './img/materialize-logo-0FCAD8A6F8-seeklogo.com.png';
+import mongodb from './img/mongodb.png';
+import mysql from './img/mysql-logo2.png';
+import react from './img/react.png';
+import jsonServer from './img/json-server.png';
+import styleComponent from './img/StyleComponent.png';
+import typescript from './img/typescript.png';
+
+const technologiesData = [
+  { name: 'HTML 5', image: html },
+  { name: 'CSS', image: css },
+  { name: 'JAVASCRIPT', image: javascript },
+  { name: 'BOOTSTRAP', image: bootstrap },
+  { name: 'MATERIALIZE', image: materialize },
+  { name: 'REACT', image: react },
+  { name: 'BOOTSTRAP REACT', image: bootstrapReact }, 
+  { name: 'STYLE-COMPONENT', image: styleComponent },
+  { name: 'REACT-TYPESCRIPT', image: typescript },
+  { name: 'MYSQL', image: mysql },
+  { name: 'CHAKRA-UI', image: chakra },
+  { name: 'JSON-SERVER', image: jsonServer },
+];
 
 function Tecnologias() {
   return (
-    <>
-    <div class="container">
-      <h1 style={{marginTop: "22px", textAlign: "center", color: "var(--bs-cyan)"}}>Conhecimentos:</h1>
-    <div class="row">
-        <div class="col">
-            <div class="card" style={{textAlign: "center", background: "rgba(33,37,41,0)"}}>
-                <div class="card-body">
-                    <h6 style={{color: "rgb(97,218,251)"}}>HTML 5</h6>
-                    <img src={html} style={{width: "100px", height: "100px"}} />
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style={{textAlign: "center", background: "rgba(33,37,41,0)"}}>
-                <div class="card-body">
-                    <h6 style={{color: "rgb(97,218,251)"}}>CSS</h6>
-                    <img src={css} style={{width: "100px", height: "100px"}} />
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style={{textAlign: "center", background: "rgba(33,37,41,0)"}}>
-                <div class="card-body">
-                    <h6 style={{color: "rgb(97,218,251)"}}>JAVASCRIPT</h6>
-                    <img src={javascript} style={{width: "100px", height: "100px"}} />
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style={{textAlign: "center", background: "rgba(33,37,41,0)"}}>
-                <div class="card-body">
-                    <h6 style={{color: "rgb(97,218,251)"}}>BOOTSTRAP</h6>
-                    <img src={bootstrap} style={{width: "100px", height: "100px"}} />
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style={{textAlign: "center", background: "rgba(33,37,41,0)"}}>
-                <div class="card-body">
-                    <h6 style={{color: "rgb(97,218,251)"}}>MATERIALIZE</h6>
-                    <img src={materialize} style={{width: "138px", height: "100px"}} />
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style={{textAlign: "center", background: "rgba(33,37,41,0)"}}>
-                <div class="card-body">
-                    <h6 style={{color: "rgb(97,218,251)"}}>REACT</h6>
-                    <img src={react} style={{width: "122px", height: "100px"}} />
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style={{textAlign: "center", background: "rgba(33,37,41,0)"}}>
-                <div class="card-body">
-                    <h6 style={{color: "rgb(97,218,251)"}}>BOOTSTRAP REACT</h6>
-                    <img src={bootstrapReact} style={{width: "142px", height: "100px"}} />
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style={{textAlign: "center", background: "rgba(33,37,41,0)"}}>
-                <div class="card-body">
-                    <h6 style={{color: "rgb(97,218,251)"}}>MONGO DB</h6>
-                    <img src={mongodb} style={{width: "100px", height: "100px"}} />
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style={{textAlign: "center", background: "rgba(33,37,41,0)"}}>
-                <div class="card-body">
-                    <h6 style={{color: "rgb(97,218,251)"}}>STYLE-COMPONENT</h6>
-                    <img src={styleComponent} style={{width: "100px", height: "100px"}} />
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style={{textAlign: "center", background: "rgba(33,37,41,0)"}}>
-                <div class="card-body">
-                    <h6 style={{color: "rgb(97,218,251)"}}>REACT-TYPESCRIPT</h6>
-                    <img src={typescript} style={{width: "121px", height: "100px"}} />
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style={{textAlign: "center", background: "rgba(33,37,41,0)"}}>
-                <div class="card-body">
-                    <h6 style={{color: "rgb(97,218,251)"}}>MYSQL</h6>
-                    <img src={mysql} style={{width: "100px", height: "100px"}} />
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style={{textAlign: "center", background: "rgba(33,37,41,0)"}}>
-                <div class="card-body">
-                    <h6 style={{color: "rgb(97,218,251)"}}>CHAKRA-UI</h6>
-                    <img src={chakra} style={{width: "100px", height: "100px"}} />
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style={{textAlign: "center", background: "rgba(33,37,41,0)"}}>
-                <div class="card-body">
-                    <h6 style={{color: "rgb(97,218,251)"}}>JSON-SERVER</h6>
-                    <img src={jsonServer} style={{width: "189px", height: "65px"}} />
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-    </>
-  )
+    <Box p={4}>
+      <Text textAlign="center" color="teal.400" fontSize="xl" mt={4}>
+        Conhecimentos:
+      </Text>
+      <Flex flexWrap="wrap" justifyContent="center">
+        {technologiesData.map((tech, index) => (
+          <Box
+            key={index}
+            textAlign="center"
+            bg="rgba(33,37,41,0)"
+            p={2}
+            m={2}
+            w="150px"
+          >
+            <Text color="teal.400" fontSize="md" mb={2}>
+              {tech.name}
+            </Text>
+            <Image src={tech.image} alt={tech.name} boxSize="70px" />
+          </Box>
+        ))}
+      </Flex>
+    </Box>
+  );
 }
 
-export default Tecnologias
+export default Tecnologias;
