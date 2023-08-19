@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Flex, Text, Image } from '@chakra-ui/react';
+import { useTrail, animated } from 'react-spring';
 
 import html from './img/html.png';
 import css from './img/css.png';
@@ -22,7 +23,7 @@ const technologiesData = [
   { name: 'BOOTSTRAP', image: bootstrap },
   { name: 'MATERIALIZE', image: materialize },
   { name: 'REACT', image: react },
-  { name: 'BOOTSTRAP REACT', image: bootstrapReact }, 
+  { name: 'BOOTSTRAP REACT', image: bootstrapReact },
   { name: 'STYLE-COMPONENT', image: styleComponent },
   { name: 'REACT-TYPESCRIPT', image: typescript },
   { name: 'MYSQL', image: mysql },
@@ -31,15 +32,21 @@ const technologiesData = [
 ];
 
 function Tecnologias() {
+  const trail = useTrail(technologiesData.length, {
+    from: { opacity: 0, transform: 'translateX(-100px)' },
+    to: { opacity: 1, transform: 'translateX(0)' },
+  });
+
   return (
     <Box p={4}>
       <Text textAlign="center" color="teal.400" fontSize="xl" mt={4}>
         Conhecimentos:
       </Text>
       <Flex flexWrap="wrap" justifyContent="center">
-        {technologiesData.map((tech, index) => (
-          <Box
+        {trail.map((props, index) => (
+          <animated.div
             key={index}
+            style={{ ...props }}
             textAlign="center"
             bg="rgba(33,37,41,0)"
             p={2}
@@ -47,10 +54,14 @@ function Tecnologias() {
             w="150px"
           >
             <Text color="teal.400" fontSize="md" mb={2}>
-              {tech.name}
+              {technologiesData[index].name}
             </Text>
-            <Image src={tech.image} alt={tech.name} boxSize="70px" />
-          </Box>
+            <Image
+              src={technologiesData[index].image}
+              alt={technologiesData[index].name}
+              boxSize="70px"
+            />
+          </animated.div>
         ))}
       </Flex>
     </Box>
