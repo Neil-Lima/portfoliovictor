@@ -59,28 +59,7 @@ function Contato() {
                   </Box>
                 </Flex>
               </Flex>
-            </Box>
-
-            <Box w={{ base: '100%', md: 'auto' }}>
-              <Box>
-                <form className="p-3 p-xl-4" method="post">
-                  <Box mb={3}>
-                    <Input id="name-1" variant="filled" type="text" name="name" placeholder="Name" />
-                  </Box>
-                  <Box mb={3}>
-                    <Input id="email-1" variant="filled" type="email" name="email" placeholder="Email" />
-                  </Box>
-                  <Box mb={3}>
-                    <Textarea id="message-1" variant="filled" name="message" rows="6" placeholder="Message" />
-                  </Box>
-                  <Box>
-                    <Button colorScheme="blue" w="full" type="submit">
-                      Send
-                    </Button>
-                  </Box>
-                </form>
-              </Box>
-            </Box>
+            </Box>            
           </Flex>
         </Container>
       </Box>
