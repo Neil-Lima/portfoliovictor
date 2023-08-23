@@ -1,6 +1,5 @@
 import React from 'react';
 import { Box, Flex, Text, Image } from '@chakra-ui/react';
-import { useTrail, animated } from 'react-spring';
 
 import html from './img/html.png';
 import css from './img/css.png';
@@ -15,6 +14,7 @@ import react from './img/react.png';
 import jsonServer from './img/json-server.png';
 import styleComponent from './img/StyleComponent.png';
 import typescript from './img/typescript.png';
+import material from './img/material.png';
 
 const technologiesData = [
   { name: 'HTML 5', image: html },
@@ -29,24 +29,19 @@ const technologiesData = [
   { name: 'MYSQL', image: mysql },
   { name: 'CHAKRA-UI', image: chakra },
   { name: 'JSON-SERVER', image: jsonServer },
+  { name: 'Material-ui', image: material },
 ];
 
 function Tecnologias() {
-  const trail = useTrail(technologiesData.length, {
-    from: { opacity: 0, transform: 'translateX(-100px)' },
-    to: { opacity: 1, transform: 'translateX(0)' },
-  });
-
   return (
     <Box p={4}>
-      <Text textAlign="center" color="teal.400" fontSize="xl" mt={4}>
+      <Text textAlign="center" color="white" fontSize="xl" mt={4}>
         Conhecimentos:
       </Text>
       <Flex flexWrap="wrap" justifyContent="center">
-        {trail.map((props, index) => (
-          <animated.div
+        {technologiesData.map((technology, index) => (
+          <Box
             key={index}
-            style={{ ...props }}
             textAlign="center"
             bg="rgba(33,37,41,0)"
             p={2}
@@ -54,14 +49,14 @@ function Tecnologias() {
             w="150px"
           >
             <Text color="teal.400" fontSize="md" mb={2}>
-              {technologiesData[index].name}
+              {technology.name}
             </Text>
             <Image
-              src={technologiesData[index].image}
-              alt={technologiesData[index].name}
-              boxSize="70px"
+              src={technology.image}
+              alt={technology.name}
+              boxSize="50px"
             />
-          </animated.div>
+          </Box>
         ))}
       </Flex>
     </Box>

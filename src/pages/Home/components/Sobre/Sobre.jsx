@@ -1,11 +1,11 @@
 import React from 'react';
 import { Box, Flex, Image, Text } from '@chakra-ui/react';
 import { FaStar } from 'react-icons/fa';
-
 import Eu from './img/eu.jpg';
 
 function Sobre() {
   return (
+      
     <Box p={4}>
       <Flex direction={{ base: 'column', md: 'row' }} align="center">
         <Flex
@@ -25,8 +25,8 @@ function Sobre() {
             Sobre mim:
           </Text>
           <Text>
-            Olá, me chamo Victor Lima, tenho 29 anos, sou desenvolvedor
-            Front-End junior, Estou cursando o terceiro semestre de análise e
+            Olá, me chamo Victor Lima, tenho 30 anos, moro em Belém do Pará, sou desenvolvedor
+            Front-End junior, Estou cursando o quarto semestre de análise e
             desenvolvimento de sistemas.
           </Text>
           <Text>
@@ -35,12 +35,14 @@ function Sobre() {
           </Text>
           <Text>
             Possuo conhecimento nas tecnologias Html, Css, javascript, Bootstrap,
-            Mysql, Materialize, MongoDb, Style-components, React, React-typescript, etc.
+            Mysql, Materialize, Style-components, React, React-typescript, Chakra-ui, Material-ui, Json-server, etc.
           </Text>
         </Flex>
         <Image src={Eu} alt="Eu" width="410px" />
       </Flex>
     </Box>
+    
+    
   );
 }
 

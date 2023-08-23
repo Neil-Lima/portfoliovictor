@@ -11,7 +11,7 @@ function Hero() {
       backgroundPosition="center"
       backgroundSize="cover"
       backgroundRepeat="no-repeat"
-      backgroundAttachment="fixed" // Adicione essa propriedade para fixar o background
+      backgroundAttachment="fixed"
       padding="66px"
       borderRadius="lg"
       boxShadow="md"

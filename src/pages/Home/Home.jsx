@@ -6,17 +6,20 @@ import Tecnologias from './components/tecnologias/Tecnologias'
 import Navegacao from './components/navegacao/Navegacao'
 import Contato from './components/Contato/Contato'
 import CardsProjetos from './components/CardsProjetos/CardsProjetos'
+import { Container } from 'react-bootstrap'
 
 function Home() {
   return (
     <>
       <Navegacao />
       <Hero />
+      <Container>
       <Sobre /><br />
       <Servicos /> <br />
-      <Tecnologias />
-      <CardsProjetos />
-      <Contato />
+      <Tecnologias /><br />
+      <CardsProjetos /><br />
+      <Contato /><br />
+      </Container>
     </>
 
   )
