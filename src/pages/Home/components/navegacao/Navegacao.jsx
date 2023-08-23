@@ -1,11 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Navbar, Container, Nav, Image } from 'react-bootstrap';
+import { Navbar, Container, Nav } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import Logo from './img/logo4.png';
 
 function Navegacao() {
+  const githubProfileLink = 'https://github.com/Neil-Lima';
+
   return (
     <Navbar bg="dark" variant="dark" expand="md" className="py-3">
       <Container>
@@ -22,20 +23,13 @@ function Navegacao() {
               <img src={Logo} style={{ width: '54px' }} alt="Logo" />
             </Nav.Link>
           </Nav>
-          <div className="d-md-none my-2">
-            <button className="btn btn-light me-2" type="button">
-              Button
-            </button>
-            <button className="btn btn-primary" type="button">
-              Button
-            </button>
-          </div>
         </Navbar.Collapse>
         <div className="d-none d-md-block">
           <a
             className="btn btn-light me-2"
-            role="button"
-            href="#"
+            href={githubProfileLink}
+            target="_blank"
+            rel="noopener noreferrer"
             style={{ background: 'var(--bs-gray-900)', borderStyle: 'none' }}
           >
             <FontAwesomeIcon icon={faGithub} style={{ fontSize: '38px', color: 'var(--bs-white)' }} />
