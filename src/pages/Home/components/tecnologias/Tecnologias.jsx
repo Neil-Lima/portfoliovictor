@@ -15,6 +15,7 @@ import jsonServer from './img/json-server.png';
 import styleComponent from './img/StyleComponent.png';
 import typescript from './img/typescript.png';
 import material from './img/material.png';
+import reactquery from './img/react-query.png';
 
 const technologiesData = [
   { name: 'HTML 5', image: html },
@@ -30,10 +31,12 @@ const technologiesData = [
   { name: 'CHAKRA-UI', image: chakra },
   { name: 'JSON-SERVER', image: jsonServer },
   { name: 'Material-ui', image: material },
+  { name: 'React-query', image: reactquery },
 ];
 
 function Tecnologias() {
   return (
+
     <Box p={4}>
       <Text textAlign="center" color="white" fontSize="xl" mt={4}>
         Conhecimentos:
@@ -43,24 +46,28 @@ function Tecnologias() {
           <Box
             key={index}
             textAlign="center"
-            bg="rgba(33,37,41,0)"
+            bg="rgba(33, 37, 41, 0)"
             p={2}
             m={2}
             w="150px"
+            position="relative"
           >
-            <Text color="teal.400" fontSize="md" mb={2}>
+            <Text color="teal.400" fontSize="md" mb={2} zIndex={1}>
               {technology.name}
             </Text>
             <Image
               src={technology.image}
               alt={technology.name}
               boxSize="50px"
+              style={{
+                filter: "sepia(100%) hue-rotate(180deg) saturate(500%)",  // Aplicando a cor teal
+              }}
             />
           </Box>
         ))}
       </Flex>
     </Box>
-  );
+    );
 }
 
 export default Tecnologias;
