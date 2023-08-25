@@ -16,6 +16,9 @@ import styleComponent from './img/StyleComponent.png';
 import typescript from './img/typescript.png';
 import material from './img/material.png';
 import reactquery from './img/react-query.png';
+import reacthooks from './img/react-hooks.png';
+import reactform from './img/react-form-hook.png';
+import reactspring from './img/react-spring.png';
 
 const technologiesData = [
   { name: 'HTML 5', image: html },
@@ -32,6 +35,9 @@ const technologiesData = [
   { name: 'JSON-SERVER', image: jsonServer },
   { name: 'Material-ui', image: material },
   { name: 'React-query', image: reactquery },
+  { name: 'React-Hooks', image: reacthooks },
+  { name: 'React-Form-Hooks', image: reactform },
+  { name: 'React-Spring', image: reactspring },
 ];
 
 function Tecnologias() {
