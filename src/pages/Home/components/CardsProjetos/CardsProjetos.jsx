@@ -22,6 +22,12 @@ function CardsProjetos() {
       color: 'orange',
       repositoryLink: 'https://github.com/Neil-Lima/animesCrud',
     },
+    {
+      title: 'Mini Aplicativos',
+      description: 'Projeto pessoal que contém mini aplicativos feitos com React-boostrap e react-hooks e styled-components',
+      color: 'red',
+      repositoryLink: 'https://github.com/Neil-Lima/Mini_aplicativos'
+    },
   ];
 
   const trail = useTrail(projects.length, {
