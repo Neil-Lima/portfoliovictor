@@ -19,8 +19,9 @@ import reactquery from './img/react-query.png';
 import reacthooks from './img/react-hooks.png';
 import reactform from './img/react-form-hook.png';
 import reactspring from './img/react-spring.png';
-import primefaces from './img/primefaces.jpg'
-import primereact from './img/primereact.png'
+import primefaces from './img/primefaces.jpg';
+import primereact from './img/primereact.png';
+import Node from './img/Node.js_logo.svg.png'
 
 const technologiesData = [
   { name: 'HTML 5', image: html },
@@ -42,6 +43,8 @@ const technologiesData = [
   { name: 'React-Spring', image: reactspring },
   { name: 'Primefaces', image: primefaces },
   { name: 'PrimeReact', image: primereact },
+  { name: 'Mongo DB', image: mongodb },
+  { name: 'Node.js', image: Node },
 ];
 
 function Tecnologias() {
